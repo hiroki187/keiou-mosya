@@ -1,0 +1,67 @@
+
+/* HEADER */
+
+header {
+    padding-top: 15px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+header a {
+    color: gray;
+}
+header a:hover {
+    text-decoration: none;
+}
+.h-left {
+    display: flex;
+    list-style: none;
+}
+.h-left li {
+    margin-right: 15px;
+    font-size: 0.875rem;
+}
+.h-right {
+    display: flex;
+    list-style: none;
+}
+.h-right li {
+    margin-right: 15px;
+    font-size: 0.875rem;
+}
+
+/* ガイド */
+
+
+.guide {
+    background: blue;
+    height: 70px;
+}
+.guide ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.guide li {
+    padding: 16px 0;
+}
+.guide a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+.guide a::after {
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    top: -2px;
+    right: -5px;
+}
+.guide li:hover {
+    background-color: rgb(250, 4, 4);
+}
