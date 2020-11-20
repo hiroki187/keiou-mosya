@@ -1,0 +1,129 @@
+
+/* HEADER */
+
+header {
+    padding-top: 15px;
+}
+header .wrap {
+    display: flex;
+    justify-content: space-around;
+}
+header a {
+    color: gray;
+}
+header a:hover {
+    text-decoration: none;
+}
+.header-nav {
+    display: flex;
+    list-style: none;
+}
+.header-nav li {
+    margin-right: 15px;
+    font-size: 0.875rem;
+}
+header h1 {
+    padding-top: 20px;
+}
+
+/* ガイド */
+
+
+.guide {
+    background: blue;
+    height: 68px;
+    margin-top: 40px;
+}
+.guide ul {
+    padding: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    /* display: flex;
+    justify-content: space-around; */
+    list-style: none;
+    text-align: center;
+}
+.guide li {
+    padding: 16px 50px;
+    display: table-cell;
+    position: relative;
+    display: inline-block;
+}
+.guide a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    /* position: relative;
+    display: inline-block; */
+}
+.guide-first-list::before {
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: gray;
+    position: absolute;
+    top: 24px;
+    left: 0;
+}
+.guide li::after {
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: gray;
+    position: absolute;
+    top: 24px;
+    right: 0;
+}
+.guide li:hover {
+    background-color: red;
+}
+
+.guide-nav {
+    background: #eee;
+    margin: 0 60px;
+}
+.guide-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+.guide-wrap ul {
+    list-style: none;
+    padding: 0;
+}
+.guide-wrap li {
+    padding-top: 5px;
+}
+.guide-nav i {
+    padding-right: 5px;
+}
+.guide-nav p {
+    font-size: 2rem;
+}
+.guide-nav p::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/guide-nav-li-img.jpg);
+    background-size: contain;
+}
+.guide-nav a {
+    color: royalblue;
+}
+.guide-nav img {
+    width: 15px;
+    height: 15px;
+}
+.guide-nav-footer {
+    width: 100%;
+}
+.guide-nav-footer a {
+    display: block;
+    padding: 20px 60px 20px 60px;
+    background: rgb(217, 217, 247);
+}
+.guide-nav a:hover,
+.guide-nav-footer a:hover {
+    text-decoration: none;
+}
