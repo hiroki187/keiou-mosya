@@ -127,3 +127,126 @@ header h1 {
 .guide-nav-footer a:hover {
     text-decoration: none;
 }
+
+/* モバイル版 */
+
+
+
+@media (max-width: 600px) {
+    .header-nav {
+        display: none;
+    }
+    .header-title {
+        display: none;
+    }
+    .drawer {
+        display: flex;
+    }
+    .mobile-header-title {
+        margin: 0 auto;
+    }
+    .guide {
+        display: block;
+        
+    }
+}
+
+@media screen and (min-width:600px) {
+    .drawer {
+        display: none;
+    }
+    .mobile-header-title {
+        display: none;
+    }
+}
+
+/* ハンバーガーメニュー */
+
+header h1 {
+    font-size: 0.9rem;
+}
+
+.drawer-hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: gray;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+    bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+    top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 80;
+    left: 100%;/* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.drawer-content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.drawer-content li {
+    border-bottom: solid gray;
+    padding: 5px;
+    border-width: 1px;
+
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+    left: 0;/* メニューを画面に入れる */
+}
