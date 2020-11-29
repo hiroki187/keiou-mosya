@@ -9,16 +9,141 @@
     <title>慶應模写</title>
 </head>
 <body>
-    <header>
-            <!-- ハンバーガーメニュー部分 -->
-        <div class="drawer">
+    <div class="desktop">
 
+        <header>
+            <div class="header-nav-wrap">
+                <nav>
+                    <ul class="header-nav">
+                        <li>
+                            <a href="#">ホーム</a>
+                        </li>
+                        <li>
+                            <a href="#">お問い合わせ一覧</a>
+                        </li>
+                        <li>
+                            <a href="#">アクセス</a>
+                        </li>
+                    </ul>
+                    <form action="">
+                        <input type="text" name="search" placeholder="サイト内検索">
+                        <input type="image" src="http://www.hosp.keio.ac.jp/common/images/search_01.png" alt="検索">
+                    </form>
+                </nav>
+                <!-- <h1 class="header-title"><i class="fas fa-atom"></i>慶應義塾大学病院</h1> -->
+                <img class="header-title" src="http://www.hosp.keio.ac.jp/common/images/logo_01.png" alt="慶應義塾大学病院 Keio University Hospital">
+                <nav>
+                    <ul class="header-nav">
+                        <li>
+                            <a href="#">サイトマップ</a>
+                        </li>
+                        <li>
+                            <a href="#">English</a>
+                        </li>
+                        <li>
+                            <a href="#">採用情報</a>
+                        </li>
+                    </ul>
+                    <div class="header-change">
+                        <p>文字<br>サイズ</p>
+                        <a href="">拡大</a>
+                        <a href="">標準</a>
+                        <p>背景変更</p>
+                        <a href="">黒</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="guide">
+            <ul>
+                <li class="guide-first-list">
+                    <a href="">来院・入院の方</a>
+                </li>
+                <li>
+                    <a href="">慶應義塾大学病院について</a>
+                </li>
+                <li>
+                    <a href="">医療関係の方</a>
+                </li>
+            </ul>
+        </div>
+        <div class="guide-nav">
+            <div class="guide-wrap">
+                <div class="first-guide-nav">
+                    <p>
+                        病院へ行く
+                    </p>
+                    <ul>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="second-guide-nav">
+                    <p>
+                        調べる
+                    </p>
+                    <ul>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="third-guide-nav">
+                    <p>
+                        問い合わせる
+                    </p>
+                    <ul>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="guide-nav-footer">
+                <a href=""><i class="far fa-play-circle"></i>テキストテキストテキスト</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-header">
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="drawer">
+    
             <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
             <input type="checkbox" id="drawer-check" class="drawer-hidden" >
-
+    
             <!-- ハンバーガーアイコン -->
             <label for="drawer-check" class="drawer-open"><span></span></label>
-
+    
             <!-- メニュー -->
             <nav class="drawer-content">
                 <ul class="drawer-list">
@@ -42,127 +167,70 @@
                     </li><!-- /.drawer-item -->
                 </ul><!-- /.drawer-list -->
             </nav>
-            <img  class="mobile-header-title" src="http://www.hosp.keio.ac.jp/common/images/logo_01.png" alt="慶應義塾大学病院 Keio University Hospital">
+            <a class="mobile-header-title" href="">
+                <img src="http://www.hosp.keio.ac.jp/common/images/logo_01.png" alt="慶應義塾大学病院 Keio University Hospital">
+            </a>
         </div>
-        <div class="header-nav-wrap">
-            <nav>
-                <ul class="header-nav">
-                    <li>
-                        <a href="#">ホーム</a>
-                    </li>
-                    <li>
-                        <a href="#">お問い合わせ一覧</a>
-                    </li>
-                    <li>
-                        <a href="#">アクセス</a>
-                    </li>
-                </ul>
-                <form action="">
-                    <input type="text" name="search" placeholder="サイト内検索">
-                    <input type="image" src="http://www.hosp.keio.ac.jp/common/images/search_01.png" alt="検索">
-                </form>
-            </nav>
-            <!-- <h1 class="header-title"><i class="fas fa-atom"></i>慶應義塾大学病院</h1> -->
-            <img class="header-title" src="http://www.hosp.keio.ac.jp/common/images/logo_01.png" alt="慶應義塾大学病院 Keio University Hospital">
-            <nav>
-                <ul class="header-nav">
-                    <li>
-                        <a href="#">サイトマップ</a>
-                    </li>
-                    <li>
-                        <a href="#">English</a>
-                    </li>
-                    <li>
-                        <a href="#">採用情報</a>
-                    </li>
-                </ul>
-                <div class="header-change">
-                    <p>文字<br>サイズ</p>
-                    <a href="">拡大</a>
-                    <a href="">標準</a>
-                    <p>背景変更</p>
-                    <a href="">黒</a>
-                </div>
-            </nav>
+
+        <div class="mobile-guide">
+            <ul>
+                <li class="mobile-guide-first-list">
+                    <a href="">来院・入院の方</a>
+                </li>
+                <li>
+                    <a href="">慶應義塾大学
+                    <br>病院について</a>
+                </li>
+                <li>
+                    <a href="">医療関係の方</a>
+                </li>
+            </ul>
         </div>
-    </header>
+        
+        <div class="mobile-guide-nav">
+            <ul>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a href="">テキストテキストテキスト</a>
+                </li>
+                <li>
+                    <a class="mobile-guide-nav-footer" href="">テキストテキストテキスト</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     
-    <div class="guide">
-        <ul>
-            <li class="guide-first-list">
-                <a href="">来院・入院の方</a>
-            </li>
-            <li>
-                <a href="">慶應義塾大学病院について</a>
-            </li>
-            <li>
-                <a href="">医療関係の方</a>
-            </li>
-        </ul>
-    </div>
-    <div class="guide-nav">
-        <div class="guide-wrap">
-            <div class="first-guide-nav">
-                <p>
-                    病院へ行く
-                </p>
-                <ul>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="second-guide-nav">
-                <p>
-                    調べる
-                </p>
-                <ul>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="third-guide-nav">
-                <p>
-                    問い合わせる
-                </p>
-                <ul>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="far fa-play-circle"></i>テキストテキスト</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="guide-nav-footer">
-            <a href=""><i class="far fa-play-circle"></i>テキストテキストテキスト</a>
-        </div>
-    </div>
 </body>
 </html>
