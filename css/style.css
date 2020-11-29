@@ -4,56 +4,70 @@
 header {
     padding-top: 15px;
 }
-<<<<<<< HEAD
-header .wrap {
-=======
-header .wrapper {
->>>>>>> b7dce7bbe0aef28f9ee5f62722fc7fadfeaa8974
+.header-nav-wrap {
     display: flex;
     justify-content: space-around;
 }
 header a {
-    color: gray;
+    color: #333;
 }
 header a:hover {
     text-decoration: none;
 }
-<<<<<<< HEAD
 .header-nav {
     display: flex;
     list-style: none;
 }
+
 .header-nav li {
     margin-right: 15px;
     font-size: 0.875rem;
+    padding-left: 25px;
 }
-header h1 {
+header img {
     padding-top: 20px;
-=======
-.h-left {
+}
+input[name=search] {
+    width: 246px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 0 28px 0 10px;
+}
+.header-change {
     display: flex;
-    list-style: none;
+    padding-left: 50px;
 }
-.h-left li {
-    margin-right: 15px;
-    font-size: 0.875rem;
+.header-change p,
+.header-change a {
+    color: #656565;
+    margin-left: 15px;
+    font-size: 0.8rem;
 }
-.h-right {
+.header-change p {
     display: flex;
-    list-style: none;
+    justify-content: center;
+    align-items: center;
 }
-.h-right li {
-    margin-right: 15px;
-    font-size: 0.875rem;
->>>>>>> b7dce7bbe0aef28f9ee5f62722fc7fadfeaa8974
+.header-change a {
+    text-decoration: none;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    display: block;
+    line-height: 35px;
+    padding: 0 8px;
 }
+.header-change a:hover {
+    text-decoration: underline;
+}
+
 
 /* ガイド */
 
 
 .guide {
-    background: blue;
-<<<<<<< HEAD
+    background: #000055;
     height: 68px;
     margin-top: 40px;
 }
@@ -72,23 +86,11 @@ header h1 {
     display: table-cell;
     position: relative;
     display: inline-block;
-=======
-    height: 70px;
-}
-.guide ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
-.guide li {
-    padding: 16px 0;
->>>>>>> b7dce7bbe0aef28f9ee5f62722fc7fadfeaa8974
 }
 .guide a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
-<<<<<<< HEAD
     /* position: relative;
     display: inline-block; */
 }
@@ -116,11 +118,25 @@ header h1 {
 
 .guide-nav {
     background: #eee;
-    margin: 0 60px;
+    width: 82%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 .guide-wrap {
-    display: flex;
-    justify-content: space-around;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.first-guide-nav,
+.second-guide-nav {
+    border-right: 1px solid #dbd8d4;
+}
+.first-guide-nav,
+.second-guide-nav,
+.third-guide-nav {
+    display: table-cell;
+    padding-left: 30px;
 }
 .guide-wrap ul {
     list-style: none;
@@ -133,6 +149,8 @@ header h1 {
     padding-right: 5px;
 }
 .guide-nav p {
+    color: #333;
+    display: inline-block;
     font-size: 2rem;
 }
 .guide-nav p::before {
@@ -163,12 +181,22 @@ header h1 {
     text-decoration: none;
 }
 
+
 /* モバイル版 */
 
 
 
-@media (max-width: 600px) {
-    .header-nav {
+@media screen and (min-width: 768px) {
+    .drawer {
+        display: none;
+    }
+    /* .mobile-header-title {
+        display: none;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .header-nav-wrap {
         display: none;
     }
     .header-title {
@@ -180,124 +208,103 @@ header h1 {
     .mobile-header-title {
         margin: 0 auto;
     }
-    .guide {
+    .guide ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .guide li {
+        text-align: left;
+    }
+    .guide a {
+        font-size: 0.78px;
+        text-align: left;
+    }
+
+    
+    /* ハンバーガーメニュー */
+    
+
+    .drawer-hidden {
+        display: none;
+    }
+    
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer-open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    /* ハンバーガーメニューのアイコン */
+    .drawer-open span,
+    .drawer-open span:before,
+    .drawer-open span:after {
+        content: '';
         display: block;
-        
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: gray;
+        transition: 0.5s;
+        position: absolute;
     }
-}
-
-@media screen and (min-width:600px) {
-    .drawer {
-        display: none;
+    
+    /* 三本線のうち一番上の棒の位置調整 */
+    .drawer-open span:before {
+        bottom: 8px;
     }
-    .mobile-header-title {
-        display: none;
+    
+    /* 三本線のうち一番下の棒の位置調整 */
+    .drawer-open span:after {
+        top: 8px;
     }
-}
-
-/* ハンバーガーメニュー */
-
-header h1 {
-    font-size: 0.9rem;
-}
-
-.drawer-hidden {
-    display: none;
-}
-
-/* ハンバーガーアイコンの設置スペース */
-.drawer-open {
-    display: flex;
-    height: 60px;
-    width: 60px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    cursor: pointer;
-}
-
-/* ハンバーガーメニューのアイコン */
-.drawer-open span,
-.drawer-open span:before,
-.drawer-open span:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: gray;
-    transition: 0.5s;
-    position: absolute;
-}
-
-/* 三本線のうち一番上の棒の位置調整 */
-.drawer-open span:before {
-    bottom: 8px;
-}
-
-/* 三本線のうち一番下の棒の位置調整 */
-.drawer-open span:after {
-    top: 8px;
-}
-
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer-check:checked ~ .drawer-open span {
-    background: rgba(255, 255, 255, 0);
-}
-
-/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer-check:checked ~ .drawer-open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-}
-
-#drawer-check:checked ~ .drawer-open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-/* メニューのデザイン*/
-.drawer-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 80;
-    left: 100%;/* メニューを画面の外に飛ばす */
-    z-index: 99;
-    background: #fff;
-    transition: 0.5s;
-}
-
-.drawer-content ul {
-    padding: 0;
-    list-style: none;
-}
-
-.drawer-content li {
-    border-bottom: solid gray;
-    padding: 5px;
-    border-width: 1px;
-
-}
-
-/* アイコンがクリックされたらメニューを表示 */
-#drawer-check:checked ~ .drawer-content {
-    left: 0;/* メニューを画面に入れる */
-=======
-    position: relative;
-    display: inline-block;
-}
-.guide a::after {
-    content: "";
-    width: 2px;
-    height: 10px;
-    background-color: gray;
-    position: absolute;
-    top: -2px;
-    right: -5px;
-}
-.guide li:hover {
-    background-color: rgb(250, 4, 4);
->>>>>>> b7dce7bbe0aef28f9ee5f62722fc7fadfeaa8974
+    
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer-check:checked ~ .drawer-open span {
+        background: rgba(255, 255, 255, 0);
+    }
+    
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer-check:checked ~ .drawer-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    
+    #drawer-check:checked ~ .drawer-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    /* メニューのデザイン*/
+    .drawer-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 60px;
+        left: 100%;/* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #fff;
+        transition: 0.5s;
+    }
+    
+    .drawer-content ul {
+        padding: 0;
+        list-style: none;
+    }
+    
+    .drawer-content li {
+        border-bottom: solid gray;
+        padding: 5px;
+        border-width: 1px;
+    }
+    
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer-check:checked ~ .drawer-content {
+        left: 0;/* メニューを画面に入れる */
+    }
 }
